@@ -2951,20 +2951,22 @@ img {
   max-width: 100%;
 }
 
+code {
+  background-color: #0000000D;
+  border-radius: 5px;
+  padding: 0.2em 0.4em;
+  color: #1a1b26;
+}
+
 pre code {
   color: #d4d4d4;
-}
-code {
-  color: #db1c1b;
+  padding: 0;
 }
 
 html {
     scroll-padding-top: 70px;
 }
 
-a[target=_blank], a[href^="http"] {
-  background-image: url(../external-link.svg);
-  background-repeat: no-repeat;
-  background-position: right;
-  padding-right: 0.9em;
+.idocs-navigation .nav .nav {
+  margin: 0;
 }
