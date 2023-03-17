@@ -1,0 +1,1 @@
+/* empty css                    */import{_ as s}from"./_plugin-vue_export-helper.c27b6911.js";import{o as t,a as o,b as r,r as c}from"./entry.d29ecb3e.js";const a={},n={class:"container"},d={class:"list-item"};function i(e,_){return t(),o("div",n,[r("li",d,[c(e.$slots,"default",{},void 0,!0)])])}const p=s(a,[["render",i],["__scopeId","data-v-0ff19ccd"]]);export{p as default};

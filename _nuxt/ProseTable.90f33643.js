@@ -1,0 +1,1 @@
+/* empty css                       */import{_ as o}from"./_plugin-vue_export-helper.c27b6911.js";import{o as t,a as r,b as a,r as s}from"./entry.d29ecb3e.js";const n={},c={class:"container"};function d(e,l){return t(),r("div",c,[a("table",null,[s(e.$slots,"default",{},void 0,!0)])])}const m=o(n,[["render",d],["__scopeId","data-v-bd307588"]]);export{m as default};
