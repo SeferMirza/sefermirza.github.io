@@ -1,1 +1,0 @@
-/* empty css                       */import{_ as o}from"./_plugin-vue_export-helper.c27b6911.js";import{o as r,a as t,r as a}from"./entry.d29ecb3e.js";const n={};function s(e,c){return r(),t("tbody",null,[a(e.$slots,"default",{},void 0,!0)])}const l=o(n,[["render",s],["__scopeId","data-v-8acb27f1"]]);export{l as default};

@@ -1,1 +1,0 @@
-import{_ as s}from"./_plugin-vue_export-helper.c27b6911.js";import{o,a as t,b as r,r as c}from"./entry.d29ecb3e.js";const a={},n={class:"container"},l={class:"circle-list"};function _(e,i){return o(),t("div",n,[r("ul",l,[c(e.$slots,"default")])])}const m=s(a,[["render",_]]);export{m as default};
