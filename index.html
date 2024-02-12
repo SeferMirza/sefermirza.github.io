@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Üzülme be</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <h1>Üzülme be</h1>
+        <div class="tear">
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<style>
+    body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.container {
+    text-align: center;
+}
+
+.content {
+    position: relative;
+    display: inline-block;
+}
+
+.tear {
+    margin-left: 25%;
+    margin-right: 75%;
+    width: 100px;
+    height: 100px;
+    background-image: url("https://i.pinimg.com/originals/5d/5e/e8/5d5ee8c40ca71245292d958fee832874.jpg"); /* Resmin yolunu doğru şekilde belirtin */
+    background-size: cover; /* Resmi div boyutlarına sığdırırken oranları korur */
+    background-position: center; /* Resmi dikey ve yatay olarak merkezler */
+}
+
+@keyframes tear-fall {
+    0% { transform: translateY(-20px); }
+    50% { transform: translateY(20px); }
+    100% { transform: translateY(-20px); }
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+    color: #333;
+}
+
+</style>
