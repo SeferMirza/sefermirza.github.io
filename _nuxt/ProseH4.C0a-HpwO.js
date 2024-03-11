@@ -1,0 +1,1 @@
+import{_ as o,o as s,c as r,r as a}from"./entry.CJY7Q3Ev.js";const n=["id"],d={__name:"ProseH4",props:{id:{type:String,default:null}},setup(e){return(t,c)=>(s(),r("h4",{id:e.id},[a(t.$slots,"default",{},void 0,!0)],8,n))}},l=o(d,[["__scopeId","data-v-19956abe"]]);export{l as default};
