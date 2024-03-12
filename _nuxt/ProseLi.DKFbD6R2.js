@@ -1,1 +1,0 @@
-import{_ as s,o as t,c as o,r}from"./entry.D1nzXmck.js";const a={},c={class:"list-item"};function n(e,_){return t(),o("li",c,[r(e.$slots,"default",{},void 0,!0)])}const l=s(a,[["render",n],["__scopeId","data-v-244fa9a1"]]);export{l as default};

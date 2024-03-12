@@ -1,0 +1,1 @@
+import{_ as r,o as t,c as o,r as n}from"./entry.CfcnsbdO.js";const s={};function c(e,a){return t(),o("th",null,[n(e.$slots,"default",{},void 0,!0)])}const _=r(s,[["render",c],["__scopeId","data-v-7335d6d1"]]);export{_ as default};
