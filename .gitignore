@@ -1,0 +1,9 @@
+dist
+.nuxt
+.nuxt-*
+.output
+.gen
+
+node_modules
+
+*.log
