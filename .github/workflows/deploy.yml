@@ -1,0 +1,52 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - main
+      - 'epic/**'
+jobs:
+  generate:
+    name: Generate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Setup NodeJS
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Build Docs
+        run: |
+          cd src/sefermirza.github.io
+          npm install
+          npm run generate
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: docs
+          path: .output/public
+          if-no-files-found: error
+  publish:
+    needs: generate
+    name: Publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: deploy
+      - name: Remove Old Files
+        run: |
+          git rm -rf .
+          git clean -fxd
+      - name: Download Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: docs
+      - name: Commit & Push
+        run: |
+          git config user.name 'github-actions'
+          git config user.email 'github-actions@users.noreply.github.com'
+          git add -A
+          git commit -m 'deploy to github pages'
+          git push -f
