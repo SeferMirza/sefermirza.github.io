@@ -16,11 +16,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Build Docs
+      - name: Generate
         run: |
           cd src/sefermirza.github.io
           npm install
           npm run generate
+      - name: ls
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
