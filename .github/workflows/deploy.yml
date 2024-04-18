@@ -21,12 +21,11 @@ jobs:
           cd src/sefermirza.github.io
           npm install
           npm run generate
-      - run: ls
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: docs
-          path: .output/public
+          path: src/sefermirza.github.io/.output/public
           if-no-files-found: error
   publish:
     needs: generate
