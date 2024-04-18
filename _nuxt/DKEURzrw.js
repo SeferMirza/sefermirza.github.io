@@ -1,0 +1,1 @@
+import{L as t,_ as c,v as e,t as o,x as s}from"./QzIX30CZ.js";const n=t("/under-construction.png"),r={},_={class:"container"},a=s("div",{class:"construction"},[s("img",{class:"background-image",src:n}),s("h1",{class:"text"},"Under Construction")],-1),i=[a];function d(l,u){return o(),e("div",_,i)}const m=c(r,[["render",d]]);export{m as default};
