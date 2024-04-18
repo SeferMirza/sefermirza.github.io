@@ -1,5 +1,8 @@
 <template>
-  <div>
-    On Construction
-  </div>
+  <NuxtPage />
 </template>
+<style>
+body {
+  margin: 0;
+}
+</style>
