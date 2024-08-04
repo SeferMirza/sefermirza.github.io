@@ -1,7 +1,25 @@
+function command(text)
+{
+  return `
+    <div class="shell">
+      <span class="username">you</span>
+      <span class="server-name-with-domain">@sefermirza.dev</span>
+      :
+      <span class="special-character">~</span>
+      $&nbsp;
+      <span class="command">${text}<span>
+    </div>
+  `
+}
+
+function invalidCommandMsg(command)
+{
+  return `<div>Invalid command!<br>To see valid commands try to say <strong class="command">${command}</strong></div>`
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
   const terminal = document.getElementById("terminal");
   const input = document.getElementById("input");
-  const label = document.getElementById("label");
   const history = document.getElementById("history");
   const routes = await fetchRoutes();
   const server = routes === undefined ? true : false;
@@ -20,8 +38,8 @@ document.addEventListener("DOMContentLoaded", async () => {
           input.value = "";
           return;
         }
-        const labelValue = label.textContent;
-        history.innerHTML += `<br><span class="command">${labelValue} ${inputValue}</span><br>`;
+
+        history.innerHTML += `${command(inputValue)}`;
 
         if (server) {
           await fetchContent(input.value);
@@ -29,10 +47,11 @@ document.addEventListener("DOMContentLoaded", async () => {
           if (routes[input.value] !== undefined) {
             await fetchContent(routes[input.value]);
           } else {
-            history.innerHTML += "Invalid command!<br>";
+            history.innerHTML += invalidCommandMsg("help");
           }
         }
 
+        terminal.scrollTo(0, terminal.scrollHeight);
         input.value = "";
       }
     }
@@ -42,7 +61,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     await fetch(`/${route}`)
       .then(async (response) => {
         if (!response.ok) {
-          history.innerHTML += "Invalid command!<br>";
+          history.innerHTML += invalidCommandMsg("help");
           return;
         }
         var content = await response.text();
