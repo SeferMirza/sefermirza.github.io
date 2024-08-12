@@ -2,6 +2,7 @@
 {
     "index": "index.html",
 "about": "about.html",
+"books": "books.html",
 "links": "links.html",
 "skills": "skills.html",
 "help": "help.html"
